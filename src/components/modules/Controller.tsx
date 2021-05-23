@@ -50,7 +50,7 @@ const Controller = React.memo(() => {
 
   return (
     <Wrapper>
-      <Text text='Setting' fontSize={40} textAlign={"center"} />
+      <Text text='Setting' fontSize={35} textAlign={"center"} />
       <List>
         <Row>
           <RowTop>
@@ -244,7 +244,7 @@ const RowTop = styled.div`
 
 const RowBottom = styled.div`
   width: 100%;
-  margin: 0.6em 0 0 0;
+  margin: 0.5em 0 0 0;
   display: flex;
   justify-content: space-around;
   background-color: #4687de;
