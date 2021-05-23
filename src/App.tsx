@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 `;
 
 const Space = styled.div`
-  height: 50px;
+  height: 40px;
 `;
 
 const Flex = styled.div`
