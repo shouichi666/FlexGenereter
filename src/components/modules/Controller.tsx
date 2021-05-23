@@ -235,7 +235,7 @@ const Row = styled.li`
   display: flex;
   flex-direction: column;
   align-item: left;
-  padding: 1em 0 0;
+  padding: 0.8em 0 0;
 `;
 
 const RowTop = styled.div`
