@@ -4,18 +4,18 @@ type flexStateType = {
   display: string | any;
   flexDirection: string;
   justifyContent: string;
-  alignItems: string | any;
   flexWrap: string;
   alignContent: string;
+  alignItems: string | any;
 };
 
 const initialState: flexStateType = {
   display: "flex",
   flexDirection: "row",
   justifyContent: "flex-start",
-  alignItems: "flex-start",
-  flexWrap: "wrap",
   alignContent: "flex-start",
+  flexWrap: "nowrap",
+  alignItems: "normal",
 };
 
 const flexSlice = createSlice({

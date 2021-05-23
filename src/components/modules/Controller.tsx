@@ -156,6 +156,11 @@ const Controller = React.memo(() => {
           </RowTop>
           <RowBottom>
             <Button
+              text='nowrap'
+              checked={flexWrap}
+              onClick={onClickUpdataFlexWrap}
+            />
+            <Button
               text='wrap'
               checked={flexWrap}
               onClick={onClickUpdataFlexWrap}
@@ -165,14 +170,8 @@ const Controller = React.memo(() => {
               checked={flexWrap}
               onClick={onClickUpdataFlexWrap}
             />
-            <Button
-              text='nowrap'
-              checked={flexWrap}
-              onClick={onClickUpdataFlexWrap}
-            />
           </RowBottom>
         </Row>
-
         <Row>
           <RowTop>
             <SettingItemText text='align-items' subText='複数行設定' />
