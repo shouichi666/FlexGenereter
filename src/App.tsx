@@ -1,58 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import { FlexParent, Controller } from "./components/modules/";
+import { Header, ViewCode } from "./components/block";
+import { useAppSelector } from "./hooks/";
 
-function App() {
+const App = () => {
+  const modalState = useAppSelector((state) => state.modal);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <>
+      <Wrapper>
+        <Header />
+        <Space />
+        <Flex>
+          <FlexLeft>
+            <FlexParent />
+          </FlexLeft>
+          <FlexRight>
+            <Controller />
+          </FlexRight>
+        </Flex>
+        <ViewCode open={modalState.open} />
+      </Wrapper>
+    </>
   );
-}
+};
+
+const Wrapper = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+const Space = styled.div`
+  height: 50px;
+`;
+
+const Flex = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 10px;
+`;
+
+const FlexLeft = styled.div`
+  width: 40%;
+  transition: 1s;
+`;
+
+const FlexRight = styled.div`
+  width: 45%;
+`;
 
 export default App;
