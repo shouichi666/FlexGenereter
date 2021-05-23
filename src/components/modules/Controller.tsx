@@ -218,9 +218,9 @@ const Wrapper = styled.div`
   border-radius: 15px;
   background-color: ${CONTROLLER_COLOR};
   padding: 5px 10px 20px;
-  background: rgba(192, 221, 255, 0.3);
+  background: rgba(192, 221, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
