@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/FlexGenereter/static/css/main.102f9580.chunk.css",
-    "main.js": "/FlexGenereter/static/js/main.8c77ec4a.chunk.js",
-    "main.js.map": "/FlexGenereter/static/js/main.8c77ec4a.chunk.js.map",
+    "main.css": "/FlexGenereter/static/css/main.0fdde2b7.chunk.css",
+    "main.js": "/FlexGenereter/static/js/main.59bcb38d.chunk.js",
+    "main.js.map": "/FlexGenereter/static/js/main.59bcb38d.chunk.js.map",
     "runtime-main.js": "/FlexGenereter/static/js/runtime-main.fb6d70c2.js",
     "runtime-main.js.map": "/FlexGenereter/static/js/runtime-main.fb6d70c2.js.map",
     "static/js/2.0087352b.chunk.js": "/FlexGenereter/static/js/2.0087352b.chunk.js",
     "static/js/2.0087352b.chunk.js.map": "/FlexGenereter/static/js/2.0087352b.chunk.js.map",
     "index.html": "/FlexGenereter/index.html",
-    "static/css/main.102f9580.chunk.css.map": "/FlexGenereter/static/css/main.102f9580.chunk.css.map",
+    "static/css/main.0fdde2b7.chunk.css.map": "/FlexGenereter/static/css/main.0fdde2b7.chunk.css.map",
     "static/js/2.0087352b.chunk.js.LICENSE.txt": "/FlexGenereter/static/js/2.0087352b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fb6d70c2.js",
     "static/js/2.0087352b.chunk.js",
-    "static/css/main.102f9580.chunk.css",
-    "static/js/main.8c77ec4a.chunk.js"
+    "static/css/main.0fdde2b7.chunk.css",
+    "static/js/main.59bcb38d.chunk.js"
   ]
 }
