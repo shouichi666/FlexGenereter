@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/FlexGenereter/static/css/main.839c1189.chunk.css",
-    "main.js": "/FlexGenereter/static/js/main.c96b88fc.chunk.js",
-    "main.js.map": "/FlexGenereter/static/js/main.c96b88fc.chunk.js.map",
+    "main.css": "/FlexGenereter/static/css/main.102f9580.chunk.css",
+    "main.js": "/FlexGenereter/static/js/main.fc21e1a5.chunk.js",
+    "main.js.map": "/FlexGenereter/static/js/main.fc21e1a5.chunk.js.map",
     "runtime-main.js": "/FlexGenereter/static/js/runtime-main.fb6d70c2.js",
     "runtime-main.js.map": "/FlexGenereter/static/js/runtime-main.fb6d70c2.js.map",
-    "static/js/2.b5628f4a.chunk.js": "/FlexGenereter/static/js/2.b5628f4a.chunk.js",
-    "static/js/2.b5628f4a.chunk.js.map": "/FlexGenereter/static/js/2.b5628f4a.chunk.js.map",
+    "static/js/2.0087352b.chunk.js": "/FlexGenereter/static/js/2.0087352b.chunk.js",
+    "static/js/2.0087352b.chunk.js.map": "/FlexGenereter/static/js/2.0087352b.chunk.js.map",
     "index.html": "/FlexGenereter/index.html",
-    "static/css/main.839c1189.chunk.css.map": "/FlexGenereter/static/css/main.839c1189.chunk.css.map",
-    "static/js/2.b5628f4a.chunk.js.LICENSE.txt": "/FlexGenereter/static/js/2.b5628f4a.chunk.js.LICENSE.txt"
+    "static/css/main.102f9580.chunk.css.map": "/FlexGenereter/static/css/main.102f9580.chunk.css.map",
+    "static/js/2.0087352b.chunk.js.LICENSE.txt": "/FlexGenereter/static/js/2.0087352b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fb6d70c2.js",
-    "static/js/2.b5628f4a.chunk.js",
-    "static/css/main.839c1189.chunk.css",
-    "static/js/main.c96b88fc.chunk.js"
+    "static/js/2.0087352b.chunk.js",
+    "static/css/main.102f9580.chunk.css",
+    "static/js/main.fc21e1a5.chunk.js"
   ]
 }
