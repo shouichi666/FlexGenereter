@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/FlexGenereter/static/css/main.102f9580.chunk.css",
-    "main.js": "/FlexGenereter/static/js/main.fc21e1a5.chunk.js",
-    "main.js.map": "/FlexGenereter/static/js/main.fc21e1a5.chunk.js.map",
+    "main.js": "/FlexGenereter/static/js/main.8c77ec4a.chunk.js",
+    "main.js.map": "/FlexGenereter/static/js/main.8c77ec4a.chunk.js.map",
     "runtime-main.js": "/FlexGenereter/static/js/runtime-main.fb6d70c2.js",
     "runtime-main.js.map": "/FlexGenereter/static/js/runtime-main.fb6d70c2.js.map",
     "static/js/2.0087352b.chunk.js": "/FlexGenereter/static/js/2.0087352b.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.fb6d70c2.js",
     "static/js/2.0087352b.chunk.js",
     "static/css/main.102f9580.chunk.css",
-    "static/js/main.fc21e1a5.chunk.js"
+    "static/js/main.8c77ec4a.chunk.js"
   ]
 }
