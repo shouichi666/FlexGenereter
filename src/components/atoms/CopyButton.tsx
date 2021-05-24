@@ -1,6 +1,7 @@
 import React from "react";
 import IconButton from "@material-ui/core/IconButton";
-import FileCopyIcon from '@material-ui/icons/FileCopy';
+import FileCopyIcon from "@material-ui/icons/FileCopy";
+import Tooltip from "@material-ui/core/Tooltip";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -27,9 +28,11 @@ const CopyButton: React.FC<propType> = React.memo(({ onClick }) => {
   const classes = useStyles();
 
   return (
-    <IconButton className={classes.root} onClick={onClick}>
-      <FileCopyIcon />
-    </IconButton>
+    <Tooltip title="COPY" placement="left">
+      <IconButton className={classes.root} onClick={onClick}>
+        <FileCopyIcon />
+      </IconButton>
+    </Tooltip>
   );
 });
 

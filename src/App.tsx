@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FlexParent, Controller } from "./components/modules/";
 import { Header, ViewCode } from "./components/block";
 import { useAppSelector } from "./hooks/";
+import { sp } from "./components/style/media";
 
 const App = () => {
   const modalState = useAppSelector((state) => state.modal);
@@ -40,15 +41,28 @@ const Flex = styled.div`
   justify-content: space-around;
   width: 100%;
   padding: 0 10px;
+
+  ${sp`
+    flex-direction: column-reverse;
+  `}
 `;
 
 const FlexLeft = styled.div`
   width: 40%;
   transition: 1s;
+
+  ${sp`
+    width: 100%; 
+  `}
 `;
 
 const FlexRight = styled.div`
   width: 45%;
+
+  ${sp`
+  width: 100%;
+  margin: 0 0 30px;
+  `}
 `;
 
 export default App;

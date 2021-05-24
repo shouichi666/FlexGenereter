@@ -95,6 +95,7 @@ const Overlay = styled.div`
   width: 100%;
   height: 100%;
   backdrop-filter: blur(1px);
+  delay: 1s;
 `;
 
 const Container = styled.div`
