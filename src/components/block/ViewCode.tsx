@@ -33,13 +33,13 @@ const ViewCode: React.FC<propType> = ({ open }) => {
 
   useEffect(() => {
     const codeString = `.flex-container {
-      display: ${display};
-      flex-direction: ${flexDirection};
-      align-content: ${alignContent};
-      justify-content: ${justifyContent};
-      flex-wrap: ${flexWrap};
-      align-items: ${alignItems};
-    }`;
+    display: ${display};
+    flex-direction: ${flexDirection};
+    align-content: ${alignContent};
+    justify-content: ${justifyContent};
+    flex-wrap: ${flexWrap};
+    align-items: ${alignItems};
+  }`;
 
     setCss(codeString);
   }, [

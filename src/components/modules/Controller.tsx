@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { CONTROLLER_COLOR } from "../style/color";
 import Text from "../atoms/Text";
 import SettingItemText from "../block/SettingItemText";
-import { RadioButton, CssButton } from "../atoms/";
+import { RadioButton, CssButton, AddButton, RemoveButton } from "../atoms/";
 import { useAppSelector, useAppDispatch } from "../../hooks/index";
 import {
   updataDisplay,
@@ -13,6 +13,8 @@ import {
   updataFlexWrap,
   updataAlignContent,
 } from "../../stores/slices/flexSlice";
+import { addFlexChild, removeFlexChild } from "../../stores/slices/countSlice";
+
 import { openModal } from "../../stores/slices/modalSlice";
 
 const Controller = React.memo(() => {
@@ -53,6 +55,10 @@ const Controller = React.memo(() => {
   ) => dispatch(updataAlignContent(event.currentTarget.dataset.button));
 
   const onClickOpenModal = () => dispatch(openModal());
+
+  const onClickAddFlexChild = () => dispatch(addFlexChild());
+
+  const onClickReomveFlexChild = () => dispatch(removeFlexChild());
 
   return (
     <Wrapper>
@@ -212,7 +218,11 @@ const Controller = React.memo(() => {
         </Row>
         <Row>
           <Center>
+            <RemoveButton onClick={onClickReomveFlexChild} />
+            <Space />
             <CssButton onClick={onClickOpenModal} />
+            <Space />
+            <AddButton onClick={onClickAddFlexChild}></AddButton>
           </Center>
         </Row>
       </List>
@@ -221,6 +231,8 @@ const Controller = React.memo(() => {
 });
 
 const Wrapper = styled.div`
+  position: sticky;
+  top: 10vh;
   border-radius: 15px;
   background-color: ${CONTROLLER_COLOR};
   padding: 5px 10px 20px;
@@ -262,6 +274,10 @@ const Center = styled.div`
   display: flex;
   align-item: center;
   justify-content: center;
+`;
+
+const Space = styled.div`
+  width: 16px;
 `;
 
 export default Controller;

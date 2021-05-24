@@ -2,15 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { FlexChild } from "../block/";
 import { AddButton, RemoveButton } from "../atoms/";
-import { useAppSelector, useAppDispatch } from "../../hooks/";
-import { addFlexChild, removeFlexChild } from "../../stores/slices/countSlice";
+import { useAppSelector } from "../../hooks/";
 
 const FlexParent = React.memo(() => {
   const flexChilds = useAppSelector((state) => state.count.flexChild);
   const flex = useAppSelector((state) => state.flex);
-  const dispatch = useAppDispatch();
-  const onClickAddFlexChild = () => dispatch(addFlexChild());
-  const onClickReomveFlexChild = () => dispatch(removeFlexChild());
   return (
     <Wrapper>
       <FlexWrapper
@@ -25,11 +21,6 @@ const FlexParent = React.memo(() => {
           return <FlexChild i={i} child={child} />;
         })}
       </FlexWrapper>
-      <ButtonWrapper>
-        <AddButton onClick={onClickAddFlexChild} />
-        <Space />
-        <RemoveButton onClick={onClickReomveFlexChild} />
-      </ButtonWrapper>
     </Wrapper>
   );
 });
@@ -90,17 +81,6 @@ const FlexWrapper = styled.div<{
     `
   flex-wrap: ${flexWrap};
  `}
-`;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 30px;
-`;
-
-const Space = styled.div`
-  width: 30px;
 `;
 
 export default FlexParent;

@@ -12,7 +12,6 @@ const BlockBox: React.FC<propType> = React.memo(({ child, i }) => {
 
   useEffect(() => {
     setState(true);
-
     return () => setState(false);
   }, [state]);
 
@@ -38,14 +37,14 @@ const Block = styled.div<{
   display: flex;
   align-item: center;
   justify-content: center;
-  transition: 0.3s;
   transform: scale(0, 0);
   padding: 40px;
+
   ${({ state }) =>
     state &&
     `
       transform: scale(1,1);
-      transition: 0.5s;
+      transition: 0.17s;
     `};
 `;
 
