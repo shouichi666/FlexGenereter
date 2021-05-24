@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Text } from "../atoms";
+import { Text, CopyButton } from "../atoms";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { openModal } from "../../stores/slices/modalSlice";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -23,34 +23,43 @@ const ViewCode: React.FC<propType> = ({ open }) => {
   } = {
     ...flex,
   };
+  const [css, setCss] = useState<any>("");
 
   const onClickCloseModal = () => dispatch(openModal());
 
-  const initialValue: any = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "normal",
-    flexWrap: "nowrap",
-    alignContent: "flex-start",
+  const onClickCopyCss = () => {
+    navigator.clipboard.writeText(css).then(() => alert(css));
   };
 
-  const codeString = `.flex-container {
-    display: ${display};
-    flex-direction: ${flexDirection};
-    align-content: ${alignContent};
-    justify-content: ${justifyContent};
-    flex-wrap: ${flexWrap};
-    align-items: ${alignItems};
-  }`;
+  useEffect(() => {
+    const codeString = `.flex-container {
+      display: ${display};
+      flex-direction: ${flexDirection};
+      align-content: ${alignContent};
+      justify-content: ${justifyContent};
+      flex-wrap: ${flexWrap};
+      align-items: ${alignItems};
+    }`;
+
+    setCss(codeString);
+  }, [
+    display,
+    flexDirection,
+    justifyContent,
+    alignContent,
+    alignItems,
+    flexWrap,
+  ]);
 
   return (
     <Wrapper isOpen={open}>
       <Container>
         <Text text='CSS' fontSize={30} textAlign='center' />
         <SyntaxHighlighter language='css' style={a11yDark}>
-          {codeString}
+          {/* {codeString} */}
+          {css}
         </SyntaxHighlighter>
+        <CopyButton onClick={onClickCopyCss} />
       </Container>
       <Overlay onClick={onClickCloseModal} />
     </Wrapper>
@@ -85,8 +94,7 @@ const Wrapper = styled.div<{
 const Overlay = styled.div`
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(0.5px);
-  background-color: #0001307e;
+  backdrop-filter: blur(1px);
 `;
 
 const Container = styled.div`
@@ -97,6 +105,7 @@ const Container = styled.div`
   z-index: 100;
   text-align: center;
   box-shadow: 0 8px 52px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 12px 0 #03040a7e;
   color: yellow;
   padding: 0 0 30px;
 `;

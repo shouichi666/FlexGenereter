@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { CONTROLLER_COLOR } from "../style/color";
 import Text from "../atoms/Text";
 import SettingItemText from "../block/SettingItemText";
-import { Button, CssButton } from "../atoms/";
+import { RadioButton, CssButton } from "../atoms/";
 import { useAppSelector, useAppDispatch } from "../../hooks/index";
 import {
   updataDisplay,
@@ -28,23 +28,29 @@ const Controller = React.memo(() => {
   } = {
     ...flex,
   };
-  const onClickUpdataDisplay = (event: any) =>
-    dispatch(updataDisplay(event.target.outerText));
+  const onClickUpdataDisplay = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => dispatch(updataDisplay(event.currentTarget.dataset.button));
 
-  const onClickUpdataFlexDirection = (event: any) =>
-    dispatch(updataFlexDirection(event.target.outerText));
+  const onClickUpdataFlexDirection = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => dispatch(updataFlexDirection(event.currentTarget.dataset.button));
 
-  const onClickUpdataJustifyContent = (event: any) =>
-    dispatch(updataJustifyContent(event.target.outerText));
+  const onClickUpdataJustifyContent = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => dispatch(updataJustifyContent(event.currentTarget.dataset.button));
 
-  const onClickUpdataAlignItems = (event: any) =>
-    dispatch(updataAlignItems(event.target.outerText));
+  const onClickUpdataAlignItems = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => dispatch(updataAlignItems(event.currentTarget.dataset.button));
 
-  const onClickUpdataFlexWrap = (event: any) =>
-    dispatch(updataFlexWrap(event.target.outerText));
+  const onClickUpdataFlexWrap = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => dispatch(updataFlexWrap(event.currentTarget.dataset.button));
 
-  const onClickUpdataAlignContent = (event: any) =>
-    dispatch(updataAlignContent(event.target.outerText));
+  const onClickUpdataAlignContent = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => dispatch(updataAlignContent(event.currentTarget.dataset.button));
 
   const onClickOpenModal = () => dispatch(openModal());
 
@@ -57,12 +63,12 @@ const Controller = React.memo(() => {
             <SettingItemText text='Display' subText='親要素の表示形式' />
           </RowTop>
           <RowBottom>
-            <Button
+            <RadioButton
               text='flex'
               checked={display}
               onClick={onClickUpdataDisplay}
             />
-            <Button
+            <RadioButton
               text='inline-flex'
               checked={display}
               onClick={onClickUpdataDisplay}
@@ -74,12 +80,12 @@ const Controller = React.memo(() => {
             <SettingItemText text='flex-direction' subText='主軸の方向や向き' />
           </RowTop>
           <RowBottom>
-            <Button
+            <RadioButton
               text='row'
               checked={flexDirection}
               onClick={onClickUpdataFlexDirection}
             />
-            <Button
+            <RadioButton
               text='column'
               checked={flexDirection}
               onClick={onClickUpdataFlexDirection}
@@ -91,27 +97,27 @@ const Controller = React.memo(() => {
             <SettingItemText text='justify-content' subText='水平方向揃え' />
           </RowTop>
           <RowBottom>
-            <Button
+            <RadioButton
               text='flex-start'
               checked={justifyContent}
               onClick={onClickUpdataJustifyContent}
             />
-            <Button
+            <RadioButton
               text='flex-end'
               checked={justifyContent}
               onClick={onClickUpdataJustifyContent}
             />
-            <Button
+            <RadioButton
               text='center'
               checked={justifyContent}
               onClick={onClickUpdataJustifyContent}
             />
-            <Button
+            <RadioButton
               text='space-between'
               checked={justifyContent}
               onClick={onClickUpdataJustifyContent}
             />
-            <Button
+            <RadioButton
               text='space-around'
               checked={justifyContent}
               onClick={onClickUpdataJustifyContent}
@@ -120,33 +126,33 @@ const Controller = React.memo(() => {
         </Row>
         <Row>
           <RowTop>
-            <SettingItemText text='align-content' subText='垂直方向揃え ' />
+            <SettingItemText text='align-items' subText='垂直方向揃え ' />
           </RowTop>
           <RowBottom>
-            <Button
+            <RadioButton
               text='flex-start'
-              checked={alignContent}
-              onClick={onClickUpdataAlignContent}
+              checked={alignItems}
+              onClick={onClickUpdataAlignItems}
             />
-            <Button
+            <RadioButton
               text='flex-end'
-              checked={alignContent}
-              onClick={onClickUpdataAlignContent}
+              checked={alignItems}
+              onClick={onClickUpdataAlignItems}
             />
-            <Button
+            <RadioButton
               text='center'
-              checked={alignContent}
-              onClick={onClickUpdataAlignContent}
+              checked={alignItems}
+              onClick={onClickUpdataAlignItems}
             />
-            <Button
+            <RadioButton
               text='baseline'
-              checked={alignContent}
-              onClick={onClickUpdataAlignContent}
+              checked={alignItems}
+              onClick={onClickUpdataAlignItems}
             />
-            <Button
+            <RadioButton
               text='stretch'
-              checked={alignContent}
-              onClick={onClickUpdataAlignContent}
+              checked={alignItems}
+              onClick={onClickUpdataAlignItems}
             />
           </RowBottom>
         </Row>
@@ -155,17 +161,17 @@ const Controller = React.memo(() => {
             <SettingItemText text='flex-wrap' subText='子要素の折り返し' />
           </RowTop>
           <RowBottom>
-            <Button
+            <RadioButton
               text='nowrap'
               checked={flexWrap}
               onClick={onClickUpdataFlexWrap}
             />
-            <Button
+            <RadioButton
               text='wrap'
               checked={flexWrap}
               onClick={onClickUpdataFlexWrap}
             />
-            <Button
+            <RadioButton
               text='wrap-reverse'
               checked={flexWrap}
               onClick={onClickUpdataFlexWrap}
@@ -174,33 +180,33 @@ const Controller = React.memo(() => {
         </Row>
         <Row>
           <RowTop>
-            <SettingItemText text='align-items' subText='複数行設定' />
+            <SettingItemText text='align-content' subText='複数行設定' />
           </RowTop>
           <RowBottom>
-            <Button
+            <RadioButton
               text='flex-start'
-              checked={alignItems}
-              onClick={onClickUpdataAlignItems}
+              checked={alignContent}
+              onClick={onClickUpdataAlignContent}
             />
-            <Button
+            <RadioButton
               text='flex-end'
-              checked={alignItems}
-              onClick={onClickUpdataAlignItems}
+              checked={alignContent}
+              onClick={onClickUpdataAlignContent}
             />
-            <Button
+            <RadioButton
               text='center'
-              checked={alignItems}
-              onClick={onClickUpdataAlignItems}
+              checked={alignContent}
+              onClick={onClickUpdataAlignContent}
             />
-            <Button
+            <RadioButton
               text='baseline'
-              checked={alignItems}
-              onClick={onClickUpdataAlignItems}
+              checked={alignContent}
+              onClick={onClickUpdataAlignContent}
             />
-            <Button
+            <RadioButton
               text='stretch'
-              checked={alignItems}
-              onClick={onClickUpdataAlignItems}
+              checked={alignContent}
+              onClick={onClickUpdataAlignContent}
             />
           </RowBottom>
         </Row>

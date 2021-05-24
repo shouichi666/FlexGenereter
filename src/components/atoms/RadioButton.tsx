@@ -4,8 +4,8 @@ import styled from "styled-components";
 type propType = {
   text: string;
   checked?: string;
-  onChange?: (event: any) => void;
-  onClick?: (event: any) => void;
+  onChange?: (event: React.ChangeEvent<HTMLElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const RadioButton: React.FC<propType> = React.memo(
@@ -19,7 +19,7 @@ const RadioButton: React.FC<propType> = React.memo(
           onChange={onChange}
           readOnly
         />
-        <RadioButtonC onClick={onClick} name={text}>
+        <RadioButtonC data-button={text} onClick={onClick} name={text}>
           {text}
         </RadioButtonC>
       </RadioButtonContainer>

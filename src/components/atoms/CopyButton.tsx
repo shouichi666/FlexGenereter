@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import AddIcon from "@material-ui/icons/Add";
+import IconButton from "@material-ui/core/IconButton";
+import FileCopyIcon from '@material-ui/icons/FileCopy';
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -23,14 +23,14 @@ type propType = {
   onClick: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 };
 
-const AddButton: React.FC<propType> = React.memo(({ onClick }) => {
+const CopyButton: React.FC<propType> = React.memo(({ onClick }) => {
   const classes = useStyles();
 
   return (
-    <Button className={classes.root} onClick={onClick}>
-      <AddIcon />
-    </Button>
+    <IconButton className={classes.root} onClick={onClick}>
+      <FileCopyIcon />
+    </IconButton>
   );
 });
 
-export default AddButton;
+export default CopyButton;
