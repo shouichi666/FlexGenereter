@@ -51,20 +51,45 @@ const FlexWrapper = styled.div<{
   padding: 30px;
   border-radius: 11px;
   background: #75ff7e6c;
+  transition: 1s;
   box-shadow: inset 10px 10px 20px #75ff7e4b, inset -10px -10px 20px #75ff7e42;
-  display: ${({ displayS }) =>
-    typeof displayS === "string" ? displayS : null};
-  flex-direction: ${({ flexDirection }) =>
-    typeof flexDirection === "string" ? flexDirection : null};
-  justify-content: ${({ justifyContent }) =>
-    typeof justifyContent === "string" ? justifyContent : null};
-  align-items: ${({ alignItems }) =>
-    typeof alignItems === "string" ? alignItems : null};
-  flex-wrap: ${({ flexWrap }) =>
-    typeof flexWrap === "string" ? flexWrap : null};
-  align-content: ${({ alignContent }) =>
-    typeof alignContent === "string" ? alignContent : null};
   gap: 20px;
+
+  ${({ displayS }) =>
+    typeof displayS === "string" &&
+    `
+  display: ${displayS};
+ `}
+
+  ${({ flexDirection }) =>
+    typeof flexDirection === "string" &&
+    `
+  flex-direction: ${flexDirection};
+ `}
+
+  ${({ justifyContent }) =>
+    typeof justifyContent === "string" &&
+    `
+  justify-content: ${justifyContent};
+ `}
+
+  ${({ alignContent }) =>
+    typeof alignContent === "string" &&
+    `
+  align-content: ${alignContent};
+ `}
+
+  ${({ alignItems }) =>
+    typeof alignItems === "string" &&
+    `
+  align-items: ${alignItems};
+ `}
+
+  ${({ flexWrap }) =>
+    typeof flexWrap === "string" &&
+    `
+  flex-wrap: ${flexWrap};
+ `}
 `;
 
 const ButtonWrapper = styled.div`
